@@ -1,5 +1,5 @@
-require('normalize.css/normalize.css');
-require('styles/App.css');
+require('styles/base.css');
+require('styles/feedbacks.css');
 
 import React from 'react';
 
