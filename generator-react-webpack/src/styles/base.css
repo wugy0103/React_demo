@@ -2,7 +2,7 @@
 * @Author: wuguoyuan
 * @Date:   2016-09-09 15:54:14
 * @Last Modified by:   wuguoyuan
-* @Last Modified time: 2016-09-20 10:31:35
+* @Last Modified time: 2016-12-09 02:02:20
 */
 
 @charset "utf-8";
@@ -17,7 +17,9 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     /* 取消链接高亮  */
+    tap-highlight-color: transparent;
     -webkit-tap-highlight-color: transparent;
+    -ms-tap-highlight-color: transparent;
 }
 
 html {
@@ -35,21 +37,19 @@ html {
 @media only screen and (min-width: 561px) {
     html {
         font-size: 14px !important;
-        /*font-size: 109%!important;*/
     }
 }
 
 @media only screen and (min-width: 641px) {
     html {
         font-size: 16px !important;
-        /*font-size: 125%!important;*/
     }
 }
 
 body {
     font-size: 1.2rem;
-    font-family: "STHeitiSC-Light","Microsoft Yahei", Arial, Helvetica, sans-serif;
-    color: #5C5C5C;;
+    font-family: "STHeitiSC-Light", "Microsoft Yahei", Arial, Helvetica, sans-serif;
+    color: #5C5C5C;    ;
     background-color: #f2f2f2;
 }
 
@@ -85,12 +85,23 @@ b {
     font-weight: normal;
 }
 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input,
+textarea {
+    outline: 0;
+    resize: none;
+}
+
 .block,
 main,
 header,
 footer,
 section {
-    display: block
+    display: block;
 }
 
 .clearfix::after {
@@ -100,4 +111,13 @@ section {
     display: block;
     visibility: hidden;
     clear: both;
+}
+
+.layout {
+    width: 100%;
+    max-width: 768px;
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: #f0f;
+    overflow: hidden;
 }
